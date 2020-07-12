@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_peta">
+
+    <fragment
+        android:id="@+id/navigation_peta"
+        android:name="com.example.trio.medicare.ui.peta.PetaFragment"
+        android:label="@string/title_peta"
+        tools:layout="@layout/fragment_peta" />
+
+    <fragment
+        android:id="@+id/navigation_resep"
+        android:name="com.example.trio.medicare.ui.resep.ResepFragment"
+        android:label="@string/title_resep"
+        tools:layout="@layout/fragment_resep" />
+
+    <fragment
+        android:id="@+id/navigation_riwayat"
+        android:name="com.example.trio.medicare.ui.riwayat.RiwayatFragment"
+        android:label="@string/title_riwayat"
+        tools:layout="@layout/fragment_riwayat" />
+</navigation>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="8dp"
+    app:contentPadding="@dimen/activity_vertical_margin"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginStart="8dp"
+            android:id="@+id/layout_box"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_nama"
+                android:textStyle="bold"
+                android:textColor="#444"
+                tools:text="dr. Sahardjo"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_alamat"
+                tools:text="Rumah Sakit Puri Raharja"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_info_obat"
+                tools:text="1 Obat belum diklaim"
+                android:textStyle="bold"
+                android:textColor="#23b23b"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/layout_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_tanggal"
+                tools:text="24 Maret 2020"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginEnd="16dp"
+                android:id="@+id/iv_obat"
+                android:layout_width="30dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@id/tv_total_obat"
+                android:src="@drawable/ic_pill"
+                android:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_total_obat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4a4ec1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="20sp"
+                tools:text="4 Obat" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
