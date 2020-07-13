@@ -16,6 +16,13 @@ class ApotekAdapter(private val apoteks: List<Apotek>, private val listener: (Ap
         fun bindItem(apotek: Apotek, listener: (Apotek) -> Unit) {
             itemView.tv_nama.text = apotek.nama.toString()
             itemView.tv_alamat.text = apotek.alamat.toString()
+            itemView.tv_status.text = apotek.keterangan.toString()
+
+            itemView.tv_status.setTextColor(Color.parseColor("#6200EE"))
+            if(apotek.keterangan == "Tutup"){
+                itemView.tv_status.setTextColor(Color.parseColor("#03DAC5"))
+            }
+
             if (apotek.obat_cocok == 0) {
                 itemView.tv_info_obat.text = "Tidak ditemukan obat yang diperlukan"
                 itemView.tv_info_obat.setTextColor(Color.parseColor("#03DAC5"))

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="24dp"
     android:paddingLeft="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_vertical_margin"
     android:layout_height="match_parent"
@@ -14,10 +14,10 @@
         android:id="@+id/text_riwayat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Riwayat Klaim Obat"
+        android:layout_marginBottom="16dp"
+        android:text="Riwayat Klaim"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"/>
 
     <androidx.recyclerview.widget.RecyclerView

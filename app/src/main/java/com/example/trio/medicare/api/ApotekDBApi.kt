@@ -12,4 +12,12 @@ object ApotekDBApi {
             .toString()
     }
 
+    fun getResep(user_id: Int): String {
+        return Uri.parse(Constant.BASE_URL).buildUpon()
+            .appendPath("recipes-user")
+            .appendPath("$user_id")
+            .build()
+            .toString()
+    }
+
 }
