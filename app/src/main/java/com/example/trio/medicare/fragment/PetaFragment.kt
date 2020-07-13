@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.trio.medicare.DetailApotekActivity
 import com.example.trio.medicare.R
 import com.example.trio.medicare.adapter.ApotekAdapter
 import com.example.trio.medicare.api.ApiRepository
@@ -17,6 +18,7 @@ import com.example.trio.medicare.view.ApotekView
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_peta.*
+import org.jetbrains.anko.startActivity
 
 class PetaFragment : Fragment(), ApotekView {
 
@@ -37,7 +39,7 @@ class PetaFragment : Fragment(), ApotekView {
         super.onViewCreated(view, savedInstanceState)
 
         adapter = ApotekAdapter(apoteks) {
-//            context?.startActivity<DetailA>("match" to it)
+            context?.startActivity<DetailApotekActivity>("apotek" to it)
         }
         rv_apotek.adapter = adapter
         rv_apotek.layoutManager = LinearLayoutManager(context)
