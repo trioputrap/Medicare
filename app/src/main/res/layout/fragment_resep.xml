@@ -8,7 +8,7 @@ android:paddingTop="@dimen/activity_vertical_margin"
 android:paddingLeft="@dimen/activity_vertical_margin"
 android:paddingRight="@dimen/activity_vertical_margin"
 android:layout_height="match_parent"
-tools:context=".ui.resep.ResepFragment">
+tools:context=".fragment.ResepFragment">
 
 <TextView
     android:id="@+id/text_resep"

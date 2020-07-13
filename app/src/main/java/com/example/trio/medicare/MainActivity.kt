@@ -7,20 +7,63 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.trio.medicare.fragment.PetaFragment
+import com.example.trio.medicare.fragment.ResepFragment
+import com.example.trio.medicare.fragment.RiwayatFragment
+import com.example.trio.medicare.util.Constant
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        nav_view.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.navigation_peta -> {
+                    loadPetaFragment(savedInstanceState)
+                }
+
+                R.id.navigation_resep -> {
+                    loadResepFragment(savedInstanceState)
+                }
+
+                R.id.navigation_riwayat -> {
+                    loadRiwayatFragment(savedInstanceState)
+                }
+            }
+            true
+        }
+
+        nav_view.selectedItemId = R.id.navigation_peta
+
+    }
+
+    private fun loadPetaFragment(savedInstanceState: Bundle?) {
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.nav_host_fragment, PetaFragment(), PetaFragment::class.java.simpleName)
+                .commit()
+        }
+    }
+
+    private fun loadResepFragment(savedInstanceState: Bundle?) {
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.nav_host_fragment, ResepFragment(), ResepFragment::class.java.simpleName)
+                .commit()
+        }
+    }
+
+    private fun loadRiwayatFragment(savedInstanceState: Bundle?) {
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.nav_host_fragment, RiwayatFragment(), RiwayatFragment::class.java.simpleName)
+                .commit()
+        }
     }
 }

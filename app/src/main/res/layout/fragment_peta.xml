@@ -8,13 +8,13 @@
     android:paddingLeft="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_vertical_margin"
     android:layout_height="match_parent"
-    tools:context=".ui.riwayat.RiwayatFragment">
+    tools:context=".fragment.RiwayatFragment">
     <EditText
         android:id="@+id/et_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <TextView
-        android:id="@+id/text_riwayat"
+        android:id="@+id/text_peta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
