@@ -20,4 +20,11 @@ object ApotekDBApi {
             .toString()
     }
 
+    fun getRiwayat(user_id: Int): String {
+        return Uri.parse(Constant.BASE_URL).buildUpon()
+            .appendPath("riwayat-user")
+            .appendPath("$user_id")
+            .build()
+            .toString()
+    }
 }

@@ -9,4 +9,10 @@
         <item name="actionBarSize">100dp</item>
     </style>
 
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">#f8f8f8</item>
+        <item name="android:windowBackground">#f8f8f8</item>
+    </style>
 </resources>

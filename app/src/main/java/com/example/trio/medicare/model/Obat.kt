@@ -11,5 +11,6 @@ data class Obat(
     var satuan: String?,
     var status: Int?,
     var description: String?,
-    var paket: Int?
+    var paket: Int?,
+    var selected: Boolean = false
 ) : Parcelable

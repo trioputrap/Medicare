@@ -74,7 +74,7 @@
         app:strokeColor="#444"
         android:layout_below="@id/tv_status"
         android:layout_width="match_parent"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="5dp"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -92,12 +92,13 @@
                 android:id="@+id/tv_total_obat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#4a4ec1"
+                android:textColor="@color/colorPrimary"
                 android:layout_toEndOf="@id/iv_obat"
                 android:textSize="18sp"
                 tools:text="4 Obat" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_obat"
                 android:layout_marginTop="24dp"
                 android:layout_below="@id/tv_total_obat"
                 android:layout_toEndOf="@id/iv_obat"

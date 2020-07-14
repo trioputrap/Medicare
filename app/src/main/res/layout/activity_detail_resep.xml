@@ -16,7 +16,7 @@
         android:tint="#444" />
 
     <TextView
-        android:id="@+id/tv_nama"
+        android:id="@+id/tv_dokter"
         android:textStyle="bold"
         android:textColor="#444"
         tools:text="dr. Sahardjo"
@@ -26,22 +26,25 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/tv_rumah_sakit"
+        android:id="@+id/tv_faskes"
         tools:text="Rumah Sakit Puri Raharja"
         android:textSize="14sp"
         android:layout_toEndOf="@id/iv_dokter"
-        android:layout_below="@id/tv_nama"
+        android:layout_below="@id/tv_dokter"
         android:layout_width="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_height="wrap_content"/>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_list_obat"
         android:layout_marginTop="16dp"
         app:contentPadding="@dimen/activity_vertical_margin"
         android:layout_below="@id/iv_dokter"
         android:layout_width="match_parent"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#DDD"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -57,9 +60,10 @@
 
             <TextView
                 android:id="@+id/tv_total_obat"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#4a4ec1"
+                android:textColor="@color/colorPrimary"
                 android:layout_toEndOf="@id/iv_obat"
                 android:textSize="18sp"
                 tools:text="4 Obat" />
@@ -96,7 +100,7 @@
                 android:id="@+id/tv_pro"
                 android:layout_below="@id/v_separator"
                 android:text="Pro"
-                android:textColor="#444"
+                android:textStyle="bold"
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"/>
@@ -105,15 +109,16 @@
                 android:layout_below="@id/v_separator"
                 android:layout_toEndOf="@id/tv_pro"
                 tools:text="Pandika"
+                android:textStyle="bold"
                 android:textColor="#444"
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"/>
             <TextView
-                android:textColor="#444"
                 android:id="@+id/tv_umur"
                 android:layout_below="@id/tv_pro"
                 android:text="Umur"
+                android:textStyle="bold"
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"/>
@@ -123,21 +128,24 @@
                 android:layout_below="@id/tv_pro"
                 android:layout_toEndOf="@id/tv_umur"
                 tools:text="22 Tahun"
+                android:textStyle="bold"
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"/>
         </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <Button
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/btn_klaim"
         android:layout_below="@id/cv_list_obat"
         android:textAllCaps="false"
         android:textColor="#FFF"
         android:textStyle="bold"
         android:background="@drawable/rounded_corner"
         android:text="Klaim"
+        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </RelativeLayout>

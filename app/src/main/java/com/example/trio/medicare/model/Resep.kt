@@ -14,6 +14,10 @@ data class Resep(
     var obat_tersisa: Int?,
     var long: Int?,
     var jumlah_obat: Int?,
+    @SerializedName("name")
+    var pro: String?,
+    @SerializedName("age")
+    var usia: Int?,
     @SerializedName("recipe_obat")
     var obats: List<Obat>
 ) : Parcelable

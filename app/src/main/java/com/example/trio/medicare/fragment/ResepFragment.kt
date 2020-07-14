@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.trio.medicare.DetailApotekActivity
+import com.example.trio.medicare.DetailResepActivity
 import com.example.trio.medicare.R
 import com.example.trio.medicare.adapter.ResepAdapter
 import com.example.trio.medicare.api.ApiRepository
@@ -39,7 +40,7 @@ class ResepFragment : Fragment(), ResepView {
         super.onViewCreated(view, savedInstanceState)
 
         adapter = ResepAdapter(reseps) {
-            context?.startActivity<DetailApotekActivity>("apotek" to it)
+            context?.startActivity<DetailResepActivity>("resep" to it)
         }
         rv_resep.adapter = adapter
         rv_resep.layoutManager = LinearLayoutManager(context)
